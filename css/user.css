@@ -1,0 +1,22 @@
+.menu {
+    top: 100px;
+}
+header{
+    height: 100px;
+    
+}
+.icon-carrito{
+    width: 100%;
+    float: right;
+    text-align: right;
+    
+    font-size: 20px;
+    
+}
+#banner {
+    margin-top: 100px;
+    
+}
+#banner a{
+    display: none;
+}

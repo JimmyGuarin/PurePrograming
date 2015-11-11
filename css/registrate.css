@@ -1,0 +1,78 @@
+#banner a{
+    display: none;
+}
+form{
+    
+    width: 600px;
+    margin: auto;
+    background: #F2FFFF;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+#miFormulario input, select{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+    
+    
+}
+
+#miFormulario input{
+    
+    margin-bottom: 0px;
+}
+span{
+    
+   color: #d9534f;
+    
+    
+}
+
+#boton {
+    background: #31384A;
+    color:#fff;
+    padding: 20px;
+}
+#boton:hover {
+    
+    cursor: pointer;
+   background: rgba(51,51,51,0.8);
+    
+}
+input[type="password"], input[type="text"],
+select,input[type="number"],input[type="date"],textarea {
+  background: url('http://i.minus.com/ibhqW9Buanohx2.png') center left no-repeat, linear-gradient(top, #d6d7d7, #dee0e0);
+  border: 1px solid #a1a3a3;
+  border-radius: 4px;
+  box-shadow: 0 1px #fff;
+  box-sizing: border-box;
+  color: #696969;
+  height: 30px;
+  padding-left: 20px;
+  transition: box-shadow 0.3s;
+  width: 200px;
+}
+
+
+input[type="password"]:focus, input[type="text"]:focus {
+  box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
+  outline: 0;
+}
+
+@media (max-width:600px){
+    form{
+        width: 100%;
+    }
+}
+
+h1{
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    margin-top: 2px;
+}

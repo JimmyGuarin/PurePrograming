@@ -1,0 +1,48 @@
+form{
+    
+    width: 600px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+#miFormulario input, textarea{
+    
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+    
+    
+}
+#boton {
+    margin-top: 20px;
+    width: 100%;
+    background: #31384A;
+    color:#fff;
+    padding: 20px;
+}
+#boton:hover {
+    
+    cursor: pointer;
+   background: rgba(51,51,51,0.8);
+    
+}
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+    
+}
+
+@media (max-width:600px){
+    form{
+        width: 100%;
+    }
+    
+   
+}
