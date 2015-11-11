@@ -1,4 +1,53 @@
-form{
+
+@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
+div.social-wrap button {
+    padding-right: 45px;
+    height: 35px;
+    background: none;
+    border: none;
+    display: block;
+    background-size: 32px 32px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 15px;
+    width: 205px;
+    border-bottom: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px gray;
+    text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+}
+
+#my-signin2 div.abcRioButtonRed{
+    
+    width: 100% !important;
+    
+}
+
+button#facebook {
+    
+    background-image: url(http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png);
+    border-color: #2d5073 !important;
+    background-color: #4A6EA9;
+    
+}
+
+button#facebook:active {
+    background-color: #222;
+}
+
+button#googleplus {
+    border-color: #111;
+    background-color: #222;
+    text-shadow: #333 -1px -1px 0;
+    background-image:url(http://i.tinyuploads.com/KBZc6n.png);
+}
+
+form,div.social-wrap{
     
     width: 600px;
     margin: auto;
@@ -8,7 +57,7 @@ form{
     margin-top: 20px;
     border-radius: 7px;
 }
-#miFormulario input, select{
+#miFormulario input, select,button#facebook,button#googleplus{
     
     width: 100%;
     margin-bottom: 20px;
@@ -19,6 +68,7 @@ form{
     
     
 }
+
 #boton {
     margin-top: 20px;
     width: 100%;
@@ -29,10 +79,14 @@ form{
 #boton:hover {
     
     cursor: pointer;
-   background: rgba(51,51,51,0.8);
+    background: rgba(51,51,51,0.8);
     
 }
 
+button#facebook:hover{
+    
+    cursor: pointer;
+}
 
 input[type="password"], input[type="text"],
 select,input[type="number"],input[type="date"],textarea {
@@ -47,6 +101,7 @@ select,input[type="number"],input[type="date"],textarea {
   transition: box-shadow 0.3s;
   width: 200px;
 }
+
 
 
 input[type="password"]:focus, input[type="text"]:focus {
@@ -93,6 +148,10 @@ input[type="submit"] {
   border-bottom-left-radius:5px;
   
 }
+
+
+    
+
 
 
 @media (max-width:600px){

@@ -4,9 +4,33 @@
         <title>Mis Subastas</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scable=no, initial-scale=1, maximum-scale=1, minimun-scale=1">
+        <meta name="google-signin-client_id" content="932395650705-nc6mg50akfd5bpovecradv2r87re19c1.apps.googleusercontent.com">
     <link rel="stylesheet" href="/PurePrograming/css/fontello.css">
     <link rel="stylesheet" href="/PurePrograming/css/main.css">
     <link rel="stylesheet" href="/PurePrograming/css/login.css">
+    <script src="/PurePrograming/js/login.js"></script>  
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script>  
+        (function(d,s,id) {  
+            var js, fjs = d.getElementsByTagName(s)[0];  
+            if(d.getElementById(id)) return;  
+            js = d.createElement(s); js.id = id;  
+            js.src = "http://connect.facebook.net/es_ES/sdk.js";  
+            fjs.parentNode.insertBefore(js, fjs);  
+        }(document, 'script', 'facebook-jssdk'));  
+        window.fbAsyncInit = function() {  
+            FB.init({  
+                appId    : '684207505047553',  
+                cookie   : true,  
+                xfbml    : true,  
+                version  : 'v2.0'  
+            });  
+        }  
+    </script> 
+    
+    
+    
     </head>
     
     <body>
@@ -59,9 +83,39 @@
                     <input type="password" placeholder="Ingresa tu Contraseña" name="pass" id="pass" required>  
                     <a href="#" class="forgot">Perdiste tu Contraseña?</a>
                     <input type="submit" id="boton" value="Entrar">
-                </form>
-                   
+                     
+                    </form>
                     
+                    <div class="social-wrap a">
+                        <button id="facebook" onclick="ingresar();">Sign in with Facebook</button>
+                         <div id="my-signin2"></div>
+                        <script>
+                          function onSuccess(googleUser) {
+                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                          }
+                          function onFailure(error) {
+                            console.log(error);
+                          }
+                          function renderButton() {
+                            gapi.signin2.render('my-signin2', {
+                              'scope': 'https://www.googleapis.com/auth/plus.login',
+                              'width': 100,
+                              'height': 35,
+                              'longtitle': true,
+                              'theme': 'dark',
+                              'font-size':17,  
+                            
+                              'onsuccess': onSuccess,
+                              'onfailure': onFailure
+                            });
+                          }
+                        </script>
+                        
+                    </div>
+                      
+                   
+                                
+  
                     
                 </div>
             </section>
@@ -98,6 +152,8 @@
                 </div>
             </div>
         </footer>
+        
+         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     </body>
     
     
