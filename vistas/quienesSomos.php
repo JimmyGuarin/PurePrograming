@@ -4,9 +4,9 @@
         <title>Mis Subastas</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scable=no, initial-scale=1, maximum-scale=1, minimun-scale=1">
-    <link rel="stylesheet" href="/PurePrograming/css/fontello.css">
-    <link rel="stylesheet" href="/PurePrograming/css/main.css">
-    <link rel="stylesheet" href="/PurePrograming/css/quienesSomos.css">
+    <link rel="stylesheet" href="../css/fontello.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/quienesSomos.css">
     </head>
     
     <body>
@@ -30,7 +30,7 @@
         </header>
         <main>
             <section id="banner">
-               <img src="/PurePrograming/img/banner1.jpg" alt="">
+               <img src="../img/banner1.jpg" alt="">
                <div class="contenedor">
                <h2>Encuentra lo que necesitas</h2>
                <p>¿Que esta buscando?</p>
@@ -68,19 +68,19 @@
                 <h3>Para nosotros el cliente nuestra mayor prioridad, Registrate ahora y recibe 10 pujas GRATIS</h3>
                 <div class="contenedor">
                     <div class="info-pet">
-                        <img src="img/pet1.jpg" alt="">
+                        <img src="../img/pet1.jpg" alt="">
                         <h4>Autos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="img/pet2.jpg" alt="">
+                        <img src="../img/pet2.jpg" alt="">
                         <h4>Motos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="img/pet3.jpg" alt="">
+                        <img src="../img/pet3.jpg" alt="">
                         <h4>Electrodomesticos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="img/pet4.jpg" alt="">
+                        <img src="../img/pet4.jpg" alt="">
                         <h4>Joyas</h4>
                     </div>
                 </div>

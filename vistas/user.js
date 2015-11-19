@@ -21,69 +21,8 @@ $(document).ready(function(){
          });
  
         });
-    
-    
-   function realtime(){
-       
-         $(".value").each(function () {
-      
-                var $this = $(this);
-                var id=$( this ).attr('id');
-                
-            $.ajax({
-
-                type:'POST',
-                url:'../recursos/realtime.php',
-                data:{id:id},	
-                    success:function(data){
-
-                        $this.text(data);
-                    }   
-                });       
-      
-        });
-    
-       
-   }
-  
-    setInterval(realtime, 2000);
-    
 });
-
-
-$( ":button" ).click(function() {
-  
     
-    var email=getCook('chsm');
-    var id=$( this ).attr('id');
-    var valor=$(this).siblings('h4').html();
-    var v=$(this).siblings('h4');
-    valor=parseInt(valor.split("$")[1]);
-    valor=valor+1000;
-    var status = '';
-    $.ajax({
-
-	type:'POST',
-	url:'../recursos/agregarPuja.php',
-	data:{id:id,email:email,valor:valor},	
-        success:function(data){
-        
-            
-            var status=data;
-            if(status=="Te has quedado sin pujas"){
-                alert(data);
-            }
-            else{
-                v.text(data);
-            }
-            
-
-        
-	}
-});
-});
-
-
 
 
 function getCook(cookiename) 
@@ -96,7 +35,7 @@ function getCook(cookiename)
 
 //Sample usage
 var cookieValue = getCook('chsm');
-
+alert (cookieValue);
 
 if (cookieValue!="") {
 

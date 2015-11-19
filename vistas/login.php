@@ -5,11 +5,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scable=no, initial-scale=1, maximum-scale=1, minimun-scale=1">
         <meta name="google-signin-client_id" content="932395650705-nc6mg50akfd5bpovecradv2r87re19c1.apps.googleusercontent.com">
-    <link rel="stylesheet" href="/PurePrograming/css/fontello.css">
-    <link rel="stylesheet" href="/PurePrograming/css/main.css">
-    <link rel="stylesheet" href="/PurePrograming/css/login.css">
-    <script src="/PurePrograming/js/login.js"></script>  
+    <link rel="stylesheet" href="../css/fontello.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/login.css">
+     <script src="../js/jquery-1.11.2.js"></script>  
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="../js/login.js"></script>  
 
     <script>  
         (function(d,s,id) {  
@@ -54,7 +55,7 @@
         </header>
         <main>
             <section id="banner">
-               <img src="/PurePrograming/img/banner1.jpg" alt="">
+               <img src="../img/banner1.jpg" alt="">
                <div class="contenedor">
                <h2>Encuentra lo que necesitas</h2>
                <p>¿Que esta buscando?</p>
@@ -91,7 +92,8 @@
                          <div id="my-signin2"></div>
                         <script>
                           function onSuccess(googleUser) {
-                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+          
+                            onSignIn(googleUser);
                           }
                           function onFailure(error) {
                             console.log(error);
@@ -104,7 +106,6 @@
                               'longtitle': true,
                               'theme': 'dark',
                               'font-size':17,  
-                            
                               'onsuccess': onSuccess,
                               'onfailure': onFailure
                             });
@@ -123,19 +124,19 @@
                 <h3>Para nosotros el cliente nuestra mayor prioridad, Registrate ahora y recibe 10 pujas GRATIS</h3>
                 <div class="contenedor">
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet1.jpg" alt="">
+                        <img src="../img/pet1.jpg" alt="">
                         <h4>Autos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet2.jpg" alt="">
+                        <img src="../img/pet2.jpg" alt="">
                         <h4>Motos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet3.jpg" alt="">
+                        <img src="../img/pet3.jpg" alt="">
                         <h4>Electrodomesticos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet4.jpg" alt="">
+                        <img src="../img/pet4.jpg" alt="">
                         <h4>Joyas</h4>
                     </div>
                 </div>

@@ -1,0 +1,21 @@
+.imagen{
+    width: 400px;
+    height: 140px;
+}
+.contenedorTemp{
+    height: 365px;
+    max-width: 280px;
+    word-wrap: break-word;
+    text-align: center;
+    
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+    position: relative;
+    
+    
+}
+
+
+

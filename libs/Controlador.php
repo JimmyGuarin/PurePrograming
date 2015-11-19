@@ -39,13 +39,20 @@ class Controlador {
      protected function cargarVista($nombre_vista){
         
         $nombre_vista= strtolower($nombre_vista);
-        $nombre_vista=  ucfirst($nombre_vista);
+        //$nombre_vista=  ucfirst($nombre_vista);
+         echo "entré a vistas.";
         $urlFile = 'vistas/' . $nombre_vista.'.php';
+         echo "url: ".$urlFile;
         if (file_exists($urlFile)) {
 
             require_once $urlFile;
+            echo "entre a url file";
+            echo $urlFile;
+             header("Location:/".$urlFile);
             return true;
         } else {
+
+          echo "no entre a url file";  
           return false;
           
           }

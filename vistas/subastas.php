@@ -4,8 +4,43 @@
         <title>Mis Subastas</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scable=no, initial-scale=1, maximum-scale=1, minimun-scale=1">
-    <link rel="stylesheet" href="/PurePrograming/css/fontello.css">
-    <link rel="stylesheet" href="/PurePrograming/css/main.css">
+    <link rel="stylesheet" href="../css/fontello.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/imagen.css">
+    <link rel="stylesheet" href="../css/jquery.countdown.css">
+    <script src="../js/jquery-1.11.2.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/jquery.plugin.js"></script>
+    <script src="../js/jquery.countdown.js"></script>
+    <script src="../js/subastas.js"></script>
+    <style type="text/css">
+        .defaultCountdown { width: 100%; height: 50px; }
+    </style>
+
+    
+    <?php
+    $conexion;
+        $host="localhost";
+        $db_name="u803155544_purep";
+        $username="u803155544_felip";
+        $password="TYUce9YxsQ";
+        
+        try{
+            $conexion= new PDO("mysql:host={$host};dbname={$db_name}",
+            $username, $password);
+
+            
+			$consulta= "select * from subastas";
+			$retorno = $conexion->query($consulta);
+
+            
+				
+            
+        } catch (Exception $ex) {
+
+            echo "Connection error".$ex->getMessage();
+        }
+    ?>
     </head>
     
     <body>
@@ -30,7 +65,7 @@
         </header>
         <main>
             <section id="banner">
-               <img src="/PurePrograming/img/banner1.jpg" alt="">
+               <img src="../img/banner1.jpg" alt="">
                <div class="contenedor">
                <h2>Encuentra lo que necesitas</h2>
                <p>¿Que esta buscando?</p>
@@ -47,43 +82,40 @@
             </section>
             <section id="blog">
                 <h3>Lo ultimo en subastas en nuestro blog</h3>
-                <div class="contenedor">
-                    <article>
-                        <img src="/PurePrograming/img/pet-blog1.jpg" alt="">
-                        <h4>Caso de 180m2 con vista al mar</h4>
+                <div class="contenedor" id="blogS">
+                   
+                   <?php                
+                    
+                    $f=$retorno->fetchAll();
+                    //echo '<script language="javascript">alert("'.$f[0][0].'");</script>';
+                   
+                    
+                    
+                    foreach ($f as $row) {
+                        
+                        
+        
+                        date_default_timezone_set('America/Bogota');
+                        $objDateTime = new DateTime('NOW');
+                        $date2=$row['fechacierre'];
+                        $interval = $objDateTime->diff(new DateTime($date2));
+                        $int= $interval->format('Y-m-d H:i:s');
+                        
+                    ?>
+                    <article class="contenedorTemp" id="<?php echo $row['id']?>">
+                       
+                       
+                        <?php echo "<img class=\"imagen\" src=\""."../imagenesSubastas/".$row['imagen']."\"/>";?>   
+                        <h4><?php echo $row['nombre'];?> </h4>
+                        <div class="defaultCountdown"><?php echo $interval->format('%m %a %H %I %S');?></div>
+      
+                        <p><?php echo $row['descripcion'];?></p>
+                        
                     </article>
-                    <article>
-                        <img src="/PurePrograming/img/pet-blog2.jpg" alt="">
-                        <h4>Espectacular Chevrolet Corsa </h4>
-                    </article>
-                    <article>
-                        <img src="/PurePrograming/img/pet-blog3.jpg" alt="">
-                        <h4>Juego de anillos de diamantes</h4>
-                    </article>
-                     <article>
-                        <img src="/PurePrograming/img/pet-blog4.jpg" alt="">
-                        <h4>El mejor producto para la salud</h4>
-                    </article>
-                     <article>
-                        <img src="/PurePrograming/img/pet-blog5.jpg" alt="">
-                        <h4>Todo para tu cabello</h4>
-                    </article>
-                     <article>
-                        <img src="/PurePrograming/img/pet-blog6.jpg" alt="">
-                        <h4>Coleccion de bates de beisbol</h4>
-                    </article>
-                     <article>
-                        <img src="/PurePrograming/img/pet-blog7.jpg" alt="">
-                        <h4>Honda Civic Golpeado</h4>
-                    </article>
-                     <article>
-                        <img src="/PurePrograming/img/pet-blog8.jpg" alt="">
-                        <h4>Control Lg para Smart Tv</h4>
-                    </article>
-                     <article>
-                        <img src="/PurePrograming/img/pet-blog9.jpg" alt="">
-                        <h4>Espectacular Mansion en USA</h4>
-                    </article>
+                    <?php
+                    
+                    }
+                    ?>
                     
                 </div>
             </section>
@@ -91,19 +123,19 @@
                 <h3>Para nosotros el cliente nuestra mayor prioridad, Registrate ahora y recibe 10 pujas GRATIS</h3>
                 <div class="contenedor">
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet1.jpg" alt="">
+                        <img src="../img/pet1.jpg" alt="">
                         <h4>Autos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet2.jpg" alt="">
+                        <img src="../img/pet2.jpg" alt="">
                         <h4>Motos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet3.jpg" alt="">
+                        <img src="../img/pet3.jpg" alt="">
                         <h4>Electrodomesticos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet4.jpg" alt="">
+                        <img src="../img/pet4.jpg" alt="">
                         <h4>Joyas</h4>
                     </div>
                 </div>
@@ -120,6 +152,8 @@
                 </div>
             </div>
         </footer>
+        
+      
     </body>
     
     

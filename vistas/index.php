@@ -4,8 +4,8 @@
         <title>Mis Subastas</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scable=no, initial-scale=1, maximum-scale=1, minimun-scale=1">
-    <link rel="stylesheet" href="/PurePrograming/css/fontello.css">
-    <link rel="stylesheet" href="/PurePrograming/css/main.css">
+    <link rel="stylesheet" href="../css/fontello.css">
+    <link rel="stylesheet" href="../css/main.css">
     </head>
     
     <body>
@@ -13,23 +13,23 @@
         <header>
             <div class="contenedor">
                 
-                <h1 class="icon-subasta">Susbasta</h1>
+                <h1 class="icon-subasta">Subasta</h1>
                 <input type="checkbox" id="menu_bar">
                 <label class="icon-menu" for="menu_bar"></label>
                 
                 <nav class="menu">
                     <a href="">Inicio</a>
-                    <a href="home/cambiarVista/quienesSomos">Quienes Somos</a>
-                    <a href="home/cambiarVista/subastas">Subastas</a>
-                    <a href="home/cambiarVista/contacto">Contactenos</a>
-                    <a href="home/cambiarVista/login">Login</a>
+                    <a href="/PurePrograming/home/cambiarVista/quienesSomos">Quienes Somos</a>
+                    <a href="/PurePrograming/home/cambiarVista/subastas">Subastas</a>
+                    <a href="/PurePrograming/home/cambiarVista/contacto">Contactenos</a>
+                    <a href="/vistas/login.php">Login</a>
                 </nav>
             </div>
             
         </header>
         <main>
             <section id="banner">
-               <img src="/PurePrograming/img/banner1.jpg" alt="">
+               <img src="../img/banner1.jpg" alt="">
                <div class="contenedor">
                <h2>Encuentra lo que necesitas</h2>
                <p>¿Que esta buscando?</p>
@@ -53,15 +53,15 @@
                 <h3>Lo ultimo en subastas en nuestro blog</h3>
                 <div class="contenedor">
                     <article>
-                        <img src="/PurePrograming/img/pet-blog1.jpg" alt="">
+                        <img src="/img/pet-blog1.jpg" alt="">
                         <h4>Escoge tu mejor vivienda</h4>
                     </article>
                     <article>
-                        <img src="/PurePrograming/img/pet-blog2.jpg" alt="">
+                        <img src="/img/pet-blog2.jpg" alt="">
                         <h4>Una alternativa adicional </h4>
                     </article>
                     <article>
-                        <img src="/PurePrograming/img/pet-blog3.jpg" alt="">
+                        <img src="/img/pet-blog3.jpg" alt="">
                         <h4>Joyas para tus gustos</h4>
                     </article>
                     
@@ -71,19 +71,19 @@
                 <h3>Para nosotros el cliente nuestra mayor prioridad, Registrate ahora y recibe 10 pujas GRATIS</h3>
                 <div class="contenedor">
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet1.jpg" alt="">
+                        <img src="/img/pet1.jpg" alt="">
                         <h4>Autos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet2.jpg" alt="">
+                        <img src="/img/pet2.jpg" alt="">
                         <h4>Motos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet3.jpg" alt="">
+                        <img src="/img/pet3.jpg" alt="">
                         <h4>Electrodomesticos</h4>
                     </div>
                     <div class="info-pet">
-                        <img src="/PurePrograming/img/pet4.jpg" alt="">
+                        <img src="/img/pet4.jpg" alt="">
                         <h4>Joyas</h4>
                     </div>
                 </div>

@@ -9,32 +9,42 @@ class FrontController {
     private $params;
 
     public function index() {
-
+        echo "Entre a index";
 
         $url = $_SERVER["REQUEST_URI"];
+        echo "url  ".$url;
         $path = trim(parse_url($url, PHP_URL_PATH), "/");
-
+        
+        echo "\n   path:  ";
+        print_r($path);
         try {
             @list($appname, $controlador, $metodo, $params) = explode("/", $path, 4);
             @$params = explode('/', $params);
             
             if($controlador!=null){
+                
                 $this->controlador=$controlador;
             }
-            
+            echo "AppName".$appname;
+            echo "  Controlador".$this->controlador;
+
             if($metodo != null)
             {
                 $this->metodo =  $metodo;
             }
+            
+            echo "Metodo".$this->metodo;
         
 
+
             $micontrolador = $this->cargarControlador($this->controlador);
-            
+           
             if($micontrolador!=null){
                 
                 $micontrolador->setParametros($params);
-            
+                
                 if(method_exists($micontrolador, $this->metodo)){
+                    
                     $stringMetodo = $this->metodo;
                     $micontrolador->$stringMetodo();
                 
@@ -72,6 +82,7 @@ class FrontController {
 }
 
 $frontController = new FrontController();
+
 $frontController->index();
 ?>
    

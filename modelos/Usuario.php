@@ -36,6 +36,8 @@ class Usuario extends Modelo {
         return $this->query("Select * from users where email='$username' and pass1='$password'");
     }
     
+    
+    
     public function delete($id){
     		
     	$consulta= "delete from ".$this->nombre_tabla." where id=".$id;
@@ -46,6 +48,15 @@ class Usuario extends Modelo {
 
 
     }
+
+    public function comprarPujas($cantidad,$email_user){
+
+        $consulta= "update users SET pujas=pujas+'$cantidad' where email='$email_user'";
+        return $this->query($consulta);
+
+    }
+
+    
 
     public function update($valores,$id){
 	$consulta  = "";
